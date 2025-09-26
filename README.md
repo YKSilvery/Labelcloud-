@@ -32,18 +32,19 @@ pip install labelCloud
 labelCloud --example  
 
 启动带有示例点云的labelCloud 如果能跑出来程序就说明安装成功了
+如果报错的话检查你的python版本：python --version
 
 
 
 ## 准备点云数据
-1. 在labelCloud目录下创建或使用已有的pointclouds文件夹 默认是放到你的C: 用户（或者user）/[你的用户名]/pointclouds 文件夹，如果没有这个文件夹就创一个
+1. 在labelCloud目录下创建或使用已有的pointclouds文件夹 默认是放到你的C: 用户（或者user）/[你的用户名]/pointclouds 文件夹，如果没有这个文件夹就创一个，不然它会报错
 2. 将你的点云文件放入该文件夹
 3. 支持的格式包括：
    - 彩色点云：.pcd, .ply, .pts, .xyzrgb
    - 无色点云：.xyz, .xyzn, .bin (KITTI格式)
 
 ## 配置软件(个性化)
-启动labelclouds之后你会看到主界面，在顶部的菜单栏中，点击 ​​“Settings”​​ (设置) 菜单
+启动labelclouds并进入点云标注界面之后你会看到主界面，在顶部的菜单栏中，点击 ​​“Settings”​​ (设置) 菜单
 点击后会出现一个对话框，里面以清晰的分类（如 ​File, ​Pointcloud, ​Label, ​User Interface）列出了所有可以修改的选项
 你可以在这里直接通过输入框、下拉菜单、复选框等修改所有你关心的参数，例如：
 
@@ -79,31 +80,31 @@ labelCloud提供两种标注模式和多种校正功能。
 
 ## 快捷键参考
 
-|                               Shortcut                               | Description                                          |
-| :------------------------------------------------------------------: | ---------------------------------------------------- |
-|                             *Navigation*                             |                                                      |
-|                          Left Mouse Button                           | Rotates the camera around Point Cloud centroid       |
-|                          Right Mouse Button                          | Translates the camera                                |
-|                             Mouse Wheel                              | Zooms into the Point Cloud                           |
-|                             *Correction*                             |                                                      |
-|                          `W`, `A`, `S`, `D`                          | Translates the Bounding Box back, left, front, right |
-|                     `Ctrl` + Right Mouse Button                      | Translates the Bounding Box in all dimensions        |
-|                               `Q`, `E`                               | Lifts the Bounding Box up, down                      |
-|                               `Z`, `X`                               | Rotates the Bounding Box around z-Axis               |
-|                               `C`, `V`                               | Rotates the Bounding Box around y-Axis               |
-|                               `B`, `N`                               | Rotates the Bounding Box around x-Axis               |
-|                               `I`/ `O`                               | Increase/Decrease the Bounding Box length            |
-|                               `K`/ `L`                               | Increase/Decrease the Bounding Box width             |
-|                               `,`/ `.`                               | Increase/Decrease the Bounding Box height            |
-| Scrolling with the Cursor above a Bounding Box Side ("Side Pulling") | Changes the Dimension of the Bounding Box            |
-|                         `R`/`Left`, `F`/`Right`                      | Previous/Next sample                                 |
-|                           `T`/`Up`, `G`/`Down`                       | Previous/Next bbox                                   |
-|                             `Y`, `H`                                 | Change current bbox class to previous/next in list   |
-|                                `1`-`9`                               | Select any of first 9 bboxes with number keys        |
-|                              *General*                               |                                                      |
-|                                `Del`                                 | Deletes Current Bounding Box                         |
-|                              `P`/`Home`                              | Resets Perspective                                   |
-|                                `Esc`                                 | Cancels Selected Points                              |
+|                               快捷键                                | 说明                                     |
+| :---------------------------------------------------------------:  | ---------------------------------------- |
+|                            *视图导航*                               |                                          |
+|                           鼠标左键                                  | 围绕点云中心旋转相机                     |
+|                           鼠标右键                                  | 平移相机                                 |
+|                            鼠标滚轮                              | 缩放点云视图                             |
+|                            *标注调整*                            |                                          |
+|                          `W`, `A`, `S`, `D`                          | 将标注框向后/左/前/右平移                |
+|                     `Ctrl` + 鼠标右键                      | 全方位平移标注框                         |
+|                               `Q`, `E`                               | 升高/降低标注框                          |
+|                               `Z`, `X`                               | 绕z轴旋转标注框                          |
+|                               `C`, `V`                               | 绕y轴旋转标注框                          |
+|                               `B`, `N`                               | 绕x轴旋转标注框                          |
+|                               `I`/ `O`                               | 增加/减少标注框长度                      |
+|                               `K`/ `L`                               | 增加/减少标注框宽度                      |
+|                               `,`/ `.`                               | 增加/减少标注框高度                      |
+|                鼠标悬停在标注框侧面时滚动滚轮                 | 调整标注框尺寸                           |
+|                         `R`/`←`, `F`/`→`                      | 上一个/下一个样本                        |
+|                           `T`/`↑`, `G`/`↓`                       | 上一个/下一个标注框                      |
+|                             `Y`, `H`                                 | 将当前标注框类别切换为列表中的上一个/下一个 |
+|                                `1`-`9`                               | 用数字键选择前9个标注框中的任意一个        |
+|                            *通用操作*                            |                                          |
+|                                `Del`                                 | 删除当前标注框                           |
+|                              `P`/`Home`                              | 重置视角                                 |
+|                                `Esc`                                 | 取消选中的点                             |
 
 
 ## 导出格式

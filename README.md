@@ -17,36 +17,40 @@ labelCloud是一个轻量级的点云3D边界框标注工具，用于为3D物体
 
 ## 安装Python
 1. 访问Python官网(https://www.python.org/downloads/)
-2. 下载Python 3.7、3.8或3.9版本（labelCloud支持这些版本）
-3. 运行安装程序，务必勾选"Add Python to PATH"选项
+2. 下载Python 3.7、3.8或3.9版本（labelCloud支持这些版本）务必安装这些版本！！不然会报错
+3. 运行安装程序，务必勾选"Add Python to PATH"选项！
 4. 完成安装后，打开命令提示符(CMD)或终端，输入以下命令验证安装：
    python --version
    应该显示安装的Python版本号。
 
 ## 安装labelCloud
-### 方法一：通过pip安装（推荐新手）
+### 通过pip安装（推荐新手）
 pip install labelCloud
-labelCloud --example  # 启动带有示例点云的labelCloud
+labelCloud --example  # 启动带有示例点云的labelCloud 如果能跑出来程序就说明安装成功了
 
-### 方法二：通过git克隆安装
-git clone https://github.com/ch-sa/labelCloud.git
-cd labelCloud
-pip install -r requirements.txt
-python labelCloud.py
+
 
 ## 准备点云数据
-1. 在labelCloud目录下创建或使用已有的pointclouds文件夹
+1. 在labelCloud目录下创建或使用已有的pointclouds文件夹 默认是放到你的C: 用户（或者user）/[你的用户名]/pointclouds 文件夹，如果没有这个文件夹就创一个
 2. 将你的点云文件放入该文件夹
 3. 支持的格式包括：
    - 彩色点云：.pcd, .ply, .pts, .xyzrgb
    - 无色点云：.xyz, .xyzn, .bin (KITTI格式)
 
-## 配置软件
-编辑config.ini文件来自定义设置，或通过图形界面中的设置菜单进行调整。主要配置包括：
-- 点云文件夹路径
-- 标签保存路径
-- 点大小和颜色设置
-- 标注框默认尺寸等
+## 配置软件(个性化)
+启动labelclouds之后你会看到主界面，在顶部的菜单栏中，点击 ​​“Settings”​​ (设置) 菜单
+点击后会出现一个对话框，里面以清晰的分类（如 ​File, ​Pointcloud, ​Label, ​User Interface）列出了所有可以修改的选项
+你可以在这里直接通过输入框、下拉菜单、复选框等修改所有你关心的参数，例如：
+
+-​pointcloud_folder​： 点云文件夹路径
+
+-​label_folder​： 标签保存路径
+
+-​point_size​： 点的大小
+
+-​colorless_color​： 无色点云的颜色 (通常以 R, G, B格式输入，如 0.9, 0.9, 0.9)
+
+-​std_boundingbox_length/width/height​： 标注框的默认尺寸
 
 ## 开始标注
 labelCloud提供两种标注模式和多种校正功能。

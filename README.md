@@ -25,9 +25,13 @@ labelCloud是一个轻量级的点云3D边界框标注工具，用于为3D物体
 
 ## 安装labelCloud
 ### 通过pip安装（推荐新手）
+首先如果你是windows，搜索cmd，打开命令行终端，然后输入
+
 pip install labelCloud
 
-labelCloud --example  # 启动带有示例点云的labelCloud 如果能跑出来程序就说明安装成功了
+labelCloud --example  
+
+启动带有示例点云的labelCloud 如果能跑出来程序就说明安装成功了
 
 
 
